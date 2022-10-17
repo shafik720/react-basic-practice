@@ -1,22 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Mobile = () => {
+    let [numbers, setNumbers] = useState(100);
+    function work(){
+        let reduced = numbers - 10;
+        if(numbers>0){
+            setNumbers(reduced);
+        }
+        
+    }
     return (
         <div>
-            <h2> <span className='battery'>100</span> %</h2>
-            <button onClick={battery}>Down Battery</button>
+            <h2> <span className='battery'>{numbers}</span> %</h2>
+            <button onClick={work}>Down Battery</button>
         </div>
     );
 };
 
-function battery(){
-    let percentage = document.querySelector('.battery');
-    let percentageNumber = parseInt(percentage.innerText);
-    let reducedNumber = percentageNumber - 10;
-    if(percentageNumber>0){
-        percentage.innerText = reducedNumber;
-    }
-    
-}
+
 
 export default Mobile;
