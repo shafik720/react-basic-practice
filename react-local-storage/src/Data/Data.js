@@ -3,6 +3,10 @@ import './Data.css'
 
 const Data = (props) => {
     let {_id, age, email, gender, name} = props.element;
+
+    function saveThem(id){
+        console.log(id)
+    }
     return (
         <div>
             <div className="user-card">
@@ -11,7 +15,7 @@ const Data = (props) => {
                 <p>Age : {age} </p>
                 <p>Gender : {gender} </p>
                 <p>Id : {_id} </p>
-                <button>Add Friend</button>
+                <button onClick={()=>saveThem(_id)}>Add Friend</button>
             </div>
         </div>
     );
