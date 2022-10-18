@@ -5,8 +5,15 @@ const Data = (props) => {
     let {_id, age, email, gender, name} = props.element;
 
     function saveThem(id){
-        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-        
+        let cart = JSON.parse(localStorage.getItem('cart') || '{}');
+        let quantity = cart[id];
+        if(quantity){
+            let newQuantity = quantity + 1
+            cart[id] = newQuantity;
+        }else{
+            cart[id] = 1;
+        }        
+        localStorage.setItem('cart', JSON.stringify(cart));
         console.log(cart);
     }
     return (
