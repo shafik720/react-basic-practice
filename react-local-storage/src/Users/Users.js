@@ -8,7 +8,6 @@ const Users = () => {
     .then(res=>res.json())
     .then(data=>setUsers(data))
   },[])
-  console.log(users);
     return (
         <div>
             <h2>Total Users Found : {users.length} </h2>

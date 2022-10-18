@@ -5,3 +5,13 @@
     border: 3px solid blue;
     border-radius: 5px;
 }
+.user-card button{
+    margin: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: #EA4335;
+    color: white;
+    font-size: 16px;
+}

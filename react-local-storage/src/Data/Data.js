@@ -11,6 +11,7 @@ const Data = (props) => {
                 <p>Age : {age} </p>
                 <p>Gender : {gender} </p>
                 <p>Id : {_id} </p>
+                <button>Add Friend</button>
             </div>
         </div>
     );
