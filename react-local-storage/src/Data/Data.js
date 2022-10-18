@@ -5,7 +5,9 @@ const Data = (props) => {
     let {_id, age, email, gender, name} = props.element;
 
     function saveThem(id){
-        console.log(id)
+        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        
+        console.log(cart);
     }
     return (
         <div>
